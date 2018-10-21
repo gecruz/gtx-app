@@ -1,0 +1,22 @@
+<div class="container">
+
+  <mat-accordion *ngFor="let menuItem of menu; let i=index">
+    <mat-expansion-panel expanded="true">
+
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong>{{menuItem.name}}</strong>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <a
+        mat-raised-button
+        color="accent"
+        [routerLink]="subMenuItem.routerLink"
+        *ngFor="let subMenuItem of menuItem.subMenu; let j=index"
+      >{{subMenuItem.name}}</a>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

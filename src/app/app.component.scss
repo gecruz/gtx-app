@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.is-mobile .toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.logo {
+  margin: 0 1rem;
+  height: 30px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.is-mobile .menu-button {
+  order: -1;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+:host ::ng-deep .align-end {
+  justify-content: flex-end;
+}
+
+:host ::ng-deep .no-spin-number {
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+:host ::ng-deep .mat-accordion {
+  padding: 0 16px;
+}
+
+:host ::ng-deep .mat-action-row {
+  justify-content: flex-start;
+}
+
+:host ::ng-deep .mat-expansion-panel-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.87);
+  .mat-icon {
+    cursor: pointer;
+  }
+}
+
+:host ::ng-deep .mat-expansion-panel-header-description,
+:host ::ng-deep .mat-expansion-panel-header-title {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+:host ::ng-deep .mat-expansion-panel-body {
+  padding: 0 16px 16px;
+}
+
+:host ::ng-deep .mat-button,
+:host ::ng-deep .mat-raised-button,
+:host ::ng-deep .bt-confirm-action,
+:host ::ng-deep .bt-dismiss-action {
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin: 0 10px 5px 0;
+  .mat-icon {
+    margin: 0 16px 0 0;
+  }
+}
+
+::ng-deep .mat-dialog-actions {
+  justify-content: flex-end;
+}
+
+::ng-deep .dx-dialog-buttons {
+  justify-content: flex-end;
+}
+
+:host ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-suffix {
+  .mat-icon-button .mat-icon {
+    font-size: 24px;
+  }
+}
+
+.is-mobile .sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.sidenav {
+  min-width: 270px;
+}
+
+:host ::ng-deep dx-data-grid {
+  margin: 0 0 20px 0;
+}
+
+:host ::ng-deep span {
+  font-family: Roboto;
+}
